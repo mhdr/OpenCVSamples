@@ -7,6 +7,8 @@ blank_image = np.zeros([512, 512, 3], dtype=np.uint8)
 def draw_circle(event, x, y, flags, param):
     if event == cv2.EVENT_LBUTTONDOWN:
         cv2.circle(blank_image, center=(x, y), radius=20, color=(0, 0, 255), thickness=-1)
+    elif event == cv2.EVENT_RBUTTONDOWN:
+        cv2.circle(blank_image, center=(x, y), radius=20, color=(0, 255, 0), thickness=-1)
 
 
 cv2.namedWindow("image")
